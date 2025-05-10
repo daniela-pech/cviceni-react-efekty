@@ -23,5 +23,17 @@ export const Ukol5 = () => {
     };
     fetchCharacter();
   }, []);
-  return <>{postava === null ? <p>Načítám…</p> : <p>{postava.name}</p>}</>;
+  return (
+    <>
+      {postava === null ? (
+        <p>Načítám…</p>
+      ) : (
+        <div>
+          <p> {postava.name} </p>
+          <p> {postava.actor} </p>
+          <img src={postava.image} />
+        </div>
+      )}
+    </>
+  );
 };
